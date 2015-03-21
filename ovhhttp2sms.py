@@ -70,7 +70,7 @@ class   OvhHttp2Sms(object):
 
     def __opt_set_defered(self, data):
         assert type(data) == datetime
-        self.__request_opt['defered'] = data.strftime('COUCOU')
+        self.__request_opt['defered'] = data.strftime('%H%M%d%m%Y')
 
     def __opt_set_sms_class(self, data):
         assert type(data) == int
