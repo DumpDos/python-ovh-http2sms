@@ -110,7 +110,7 @@ class   OvhHttp2Sms(object):
         return loads(ret_val.text)
 
     def setMessage(self, msg):
-        self.__message = msg.strip().replace('\n', '%0D').replace('<br>', '%0D').replace('<br/>', '%0D')
+        self.__message = msg.strip().replace('\n', '%0D').replace('<br>', '%0D').replace('<br/>', '%0D').replace('&', '%26')
 
     def setOptions(self, **kwargs):
         for k, v in kwargs.iteritems():
